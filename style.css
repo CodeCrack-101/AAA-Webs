@@ -179,7 +179,7 @@ font-size: smaller;
     
     .navbar {
         padding: 1rem;
-        width: 400px;
+        width: 385px;
     }
 }
 
@@ -292,16 +292,16 @@ font-size: smaller;
       padding: 40px 20px;
       gap: 30px;
       align-items: center; /* Center children */
-      width: 400px;
+      width: 377px;
     }
     .bg h1
     {
-        font-size: 13px;
+        font-size: 18px;
         margin-left: 2px;
     }
     .bg p
     {
-        font-size: 11px;
+        font-size: 14px;
         margin-left: 25px;
     }
   
@@ -419,7 +419,7 @@ font-size: smaller;
     }
 
     .form1 button {
-        width: 100%;
+        width: 99%;
     }
 
     .form1 h1 {
@@ -430,8 +430,8 @@ font-size: smaller;
 @media (max-width: 480px) {
     .form1 {
        
-       width: 90%;
-        margin-left: 19px;
+       width: 96%;
+        margin-left: 45px;
     }
 
     .form1 h1 {
@@ -549,7 +549,7 @@ font-size: smaller;
     .container {
         padding: 10px;
         background-color: #2c3e50;
-        margin-left: 10px;
+        margin-left: 49px;
         width: 100%;
         border-radius: 20px;
     }
@@ -657,7 +657,7 @@ font-size: smaller;
   @media (max-width: 768px) {
     .slider
 {
-    width: 100%;
+    width: 120%;
 }    .sl {
       width: 160px;
       height: 220px;
@@ -752,13 +752,13 @@ font-size: smaller;
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .section-header h2 {
-      font-size: 1.8rem;
-      margin-left: 27px;
+      font-size: 28px;
+      margin-left: 31px;
     }
     
     .section-header p {
-      font-size: 1rem;
-      margin-left: 27px;
+      font-size: 10px;
+      margin-left: 25px;
     }
     
     .feature-card {
@@ -770,6 +770,7 @@ font-size: smaller;
   @media (max-width: 480px) {
     .why-choose-us {
       padding: 40px 15px;
+      width: 118%;
     }
     
     .feature-card {
@@ -892,7 +893,7 @@ font-size: smaller;
   @media (max-width: 768px) {
     .footer
     {
-        width: 113%;
+        width: 138%;
     }
     .footer-container {
       grid-template-columns: 1fr;
