@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AAA-Enterprises</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  </head>
+  <body>
+    <div class="Enter">
+      <img src="/logo/AAA.png" alt="AAA-Enterprises" />
+      <div class="En">
+        <h1>AAA POWER ENTERPRISES</h1>
+        <h3>
+          Add- Shop No.68, Sattar Auto Garrage, Sant Mary Church Road, Kalina
+          Donger, Santacruz East, Mumbai 400029
+        </h3>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="#" class="logo">AAA POWER ENTERPRISES</a>
+
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="bg">
+        <div>
+        <h1>WELCOME TO AAA POWER ENTERPRISES</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+    </div>
+        
+        <!-- Dotted Background Section -->
+        <div class="background-dots">
+            
+            <!-- Top Color Diamonds -->
+            <div class="decor decor-top">
+                <div class="diamond red"></div>
+                <div class="diamond green"></div>
+                <div class="diamond orange"></div>
+            </div>
+            
+            <!-- Diamond Image Grid -->
+            <div class="diamond-grid">
+                <div class="diamond-img">
+                    <img src="/logo/img1.avif" alt="Image 1">
+                </div>
+          <div class="diamond-img">
+            <img src="/logo/img2.webp" alt="Image 2">
+          </div>
+          <div class="diamond-img">
+            <img src="/logo/img3.avif" alt="Image 3">
+          </div>
+          <div class="diamond-img">
+            <img src="/logo/img4.avif" alt="Image 4">
+        </div>
+    </div>
+    
+    <!-- Bottom Color Diamonds -->
+    <div class="decor decor-bottom">
+        <div class="diamond red"></div>
+        <div class="diamond green"></div>
+        <div class="diamond orange"></div>
+    </div>
+</div>
+</div>
+
+<!-- user from -->
+<div class="form1">
+    <h1>Request Service Today</h1>
+    <form action="#" method="POST">
+        <input type="text" placeholder="Name" name="name" required>
+        <input type="email" placeholder="Email" name="email" required>
+        <input type="tel" placeholder="Phone Number" name="phone" required>
+        <button type="submit">Request</button>
+    </form>
+</div>
+
+<!--Image Slider-->
+<div class="slider">
+    <h1>What We Do</h1>
+    <div class="slider-container">
+      <button class="slider-btn prev-btn">❮</button>
+      <div class="slider-track">
+        <div class="sl">
+          <img src="/logo/hbac.jpg" alt="Electrician">
+          <h3>Electricals</h3>
+        </div>
+        <div class="sl">
+          <img src="/logo/net.jpg" alt="Networking">
+          <h3>Networking</h3>
+        </div>
+        <div class="sl">
+          <img src="/logo/tiles.avif" alt="Networking">
+          <h3>Tiles</h3>
+        </div>
+        <div class="sl">
+          <img src="/logo/plaster.jpg" alt="Networking">
+          <h3>Plaster</h3>
+        </div>
+        <div class="sl">
+          <img src="/logo/hvac.jpg" alt="Networking">
+          <h3>HVAC</h3>
+        </div>
+        <div class="sl">
+          <img src="/logo/ff.jpg" alt="Networking">
+          <h3>Fire Fightig System</h3>
+        </div>
+        <div class="sl">
+          <img src="/logo/cc.avif" alt="HVAC">
+          <h3>ConStruction</h3>
+        </div>
+        <!-- Add more .sl blocks if needed -->
+      </div>
+      <button class="slider-btn next-btn">❯</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const track = document.querySelector('.slider-track');
+      const slides = document.querySelectorAll('.sl');
+      const prevBtn = document.querySelector('.prev-btn');
+      const nextBtn = document.querySelector('.next-btn');
+      const slideWidth = slides[0].offsetWidth + 20; // width + gap
+      let currentPosition = 0;
+      let maxPosition = -(slideWidth * (slides.length - 4)); // Show 4 at a time
+      
+      // Auto slide every 3 seconds
+      let autoSlide = setInterval(nextSlide, 3000);
+      
+      function nextSlide() {
+        if (currentPosition > maxPosition) {
+          currentPosition -= slideWidth;
+          track.style.transform = `translateX(${currentPosition}px)`;
+        } else {
+          currentPosition = 0;
+          track.style.transform = `translateX(0)`;
+        }
+      }
+      
+      function prevSlide() {
+        if (currentPosition < 0) {
+          currentPosition += slideWidth;
+          track.style.transform = `translateX(${currentPosition}px)`;
+        } else {
+          currentPosition = maxPosition;
+          track.style.transform = `translateX(${currentPosition}px)`;
+        }
+      }
+      
+      nextBtn.addEventListener('click', function() {
+        clearInterval(autoSlide);
+        nextSlide();
+        autoSlide = setInterval(nextSlide, 3000);
+      });
+      
+      prevBtn.addEventListener('click', function() {
+        clearInterval(autoSlide);
+        prevSlide();
+        autoSlide = setInterval(nextSlide, 3000);
+      });
+      
+      // Pause auto-slide on hover
+      document.querySelector('.slider-container').addEventListener('mouseenter', function() {
+        clearInterval(autoSlide);
+      });
+      
+      document.querySelector('.slider-container').addEventListener('mouseleave', function() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 3000);
+      });
+    });
+  </script>
+
+<!--content-->
+<div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <div class="cards-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="/logo/elect.avif" alt="Electrician" class="card-img">
+            <div class="card-content">
+                <h3 class="card-title">Electrical Services</h3>
+                <p class="card-text">Professional electrical installations, repairs, and maintenance for residential and commercial properties.</p>
+                <a href="" class="read-more">Read More</a>
+            </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="/logo/plum1.jpg" alt="Plumbing" class="card-img">
+            <div class="card-content">
+                <h3 class="card-title">Plumbing Solutions</h3>
+                <p class="card-text">Comprehensive plumbing services including pipe repairs, installations, and emergency fixes.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="/logo/hbac.jpg" alt="HVAC" class="card-img">
+            <div class="card-content">
+                <h3 class="card-title">HVAC Maintenance</h3>
+                <p class="card-text">Heating, ventilation, and air conditioning services to keep your environment comfortable year-round.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="/logo/home.jpg" alt="Renovation" class="card-img">
+            <div class="card-content">
+                <h3 class="card-title">Home Renovation</h3>
+                <p class="card-text">Complete home renovation services to transform your living space with quality craftsmanship.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--why choose us -->
+
+<section class="why-choose-us">
+    <div class="section-header">
+      <h2>Why Choose Our Services</h2>
+      <p>We deliver exceptional quality and value through our expertise, dedication, and customer-focused approach</p>
+    </div>
+    
+    <div class="features-container">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-award"></i>
+        </div>
+        <h3>Certified Professionals</h3>
+        <p>Our team consists of licensed and certified technicians with years of hands-on experience in their respective fields.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <h3>24/7 Availability</h3>
+        <p>Emergency services available round the clock. We're there when you need us most, day or night.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-hand-holding-usd"></i>
+        </div>
+        <h3>Fair Pricing</h3>
+        <p>No hidden fees or surprise charges. We provide transparent quotes and stick to them.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Quality Guarantee</h3>
+        <p>All our work comes with a satisfaction guarantee and warranty on parts and labor.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-tools"></i>
+        </div>
+        <h3>Modern Equipment</h3>
+        <p>We use state-of-the-art tools and technology to deliver efficient, precise service.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>Customer Focused</h3>
+        <p>Your satisfaction is our priority. We listen to your needs and tailor solutions accordingly.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>About Us</h3>
+        <p>We are a team of certified professionals dedicated to providing top-quality electrical, HVAC, networking, and solar services to our community.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Our Services</h3>
+        <ul class="footer-links">
+          <li><a href="#">Electrical Services</a></li>
+          <li><a href="#">HVAC Installation</a></li>
+          <li><a href="#">Network Solutions</a></li>
+          <li><a href="#">Solar Energy</a></li>
+          <li><a href="#">Maintenance</a></li>
+          <li><a href="#">Emergency Repairs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <ul class="contact-info">
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <span>123 Tech Street, Cityville, ST 12345</span>
+          </li>
+          <li>
+            <i class="fas fa-phone-alt"></i>
+            <span>+1 (555) 123-4567</span>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <span>info@yourcompany.com</span>
+          </li>
+          <li>
+            <i class="fas fa-clock"></i>
+            <span>Mon-Fri: 8AM - 6PM<br>Sat: 9AM - 3PM</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; AAA POWER ENTERPRISES. All Rights Reserved. | Designed with ❤️ by Your Khan Obaid</p>
+    </div>
+  </footer>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
