@@ -179,7 +179,7 @@ font-size: smaller;
     
     .navbar {
         padding: 1rem;
-        width: 400px;
+        width: 135%;
     }
 }
 
@@ -682,7 +682,8 @@ font-size: smaller;
 @media (max-width:480)
 {
     .slider {
-        width: 120px;
+        width: 100%;
+        margin-left: 55px;
     }
 }
 
@@ -893,7 +894,7 @@ font-size: smaller;
   @media (max-width: 768px) {
     .footer
     {
-        width: 138%;
+        width: 146%;
     }
     .footer-container {
       grid-template-columns: 1fr;
