@@ -179,7 +179,7 @@ font-size: smaller;
     
     .navbar {
         padding: 1rem;
-        width: 175%;
+        width: 130%;
     }
 }
 
@@ -354,7 +354,7 @@ font-size: smaller;
       padding: 40px 20px;
       gap: 30px;
       align-items: center; /* Center children */
-      width: 490px;
+      width: 407px;
     }
     .bg h1
     {
