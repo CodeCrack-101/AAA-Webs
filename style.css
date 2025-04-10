@@ -292,7 +292,7 @@ font-size: smaller;
       padding: 40px 20px;
       gap: 30px;
       align-items: center; /* Center children */
-      width: 400px;
+      width: 135%;
     }
     .bg h1
     {
