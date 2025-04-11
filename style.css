@@ -958,7 +958,7 @@ font-size: smaller;
   @media (max-width: 768px) {
     .footer
     {
-        width: 100%;
+        width: 107%;
     }
     .footer-container {
       grid-template-columns: 1fr;
